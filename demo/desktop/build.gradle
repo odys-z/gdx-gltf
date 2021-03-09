@@ -5,8 +5,8 @@ dependencies {
     compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
     compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
-    
-sourceCompatibility = 1.6
+
+sourceCompatibility = 1.8
 sourceSets.main.java.srcDirs = [ "src/" ]
 sourceSets.test.java.srcDirs = [ "test/" ]
 
@@ -31,25 +31,25 @@ task debug(dependsOn: classes, type: JavaExec) {
 }
 
 task distDesktop(type: Jar, dependsOn: [classes]) {
-    from files(sourceSets.main.output.classesDir)
+    from files(sourceSets.main.output.classesDirs)
     from files(sourceSets.main.output.resourcesDir)
     from {configurations.compile.collect {zipTree(it)}}
     from files(project.assetsDir)
- 	
+
  	exclude("models")
- 	
+
  	// additional files could be added like this :
  	// from file("$projectDir/LICENSE");
-    
+
     // final JAR basename could be modified like this (default is project name) :
  	baseName = "$appName-desktop"
 
     manifest {
         attributes 'Main-Class': project.mainClassName
     }
-    doLast { 
-    	file(archivePath).setExecutable(true, false) 
-    } 
+    doLast {
+    	file(archivePath).setExecutable(true, false)
+    }
 }
 
 eclipse {
