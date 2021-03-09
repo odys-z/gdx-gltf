@@ -97,6 +97,12 @@ task copyAndroidNatives() {
 	}
 }
 
+tasks.whenTaskAdded { packageTask ->
+    if (packageTask.name.contains("package")) {
+        packageTask.dependsOn 'copyAndroidNatives'
+    }
+}
+
 task run(type: Exec) {
     def path
     def localProperties = project.file("../local.properties")

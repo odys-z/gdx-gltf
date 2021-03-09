@@ -28,6 +28,13 @@ public class AnimationLoader {
 	
 	public final Array<Animation> animations = new Array<Animation>();
 	
+	/**Convert each glAnimation into {@link Array} of {@link Animation},
+	 * which is a list of java type instance of GLTF Channels, {@link NodeAnimation}. 
+	 * 
+	 * @param glAnimations
+	 * @param nodeResolver
+	 * @param dataResolver
+	 */
 	public void load(Array<GLTFAnimation> glAnimations, NodeResolver nodeResolver, DataResolver dataResolver) {
 		
 		if(glAnimations != null){
@@ -42,6 +49,14 @@ public class AnimationLoader {
 		}
 	}
 	
+	/**Convert glAnimation into {@link Animation},
+	 * a list of java type instance of GLTF Channels, {@link NodeAnimation}. 
+	 * 
+	 * @param glAnimation
+	 * @param nodeResolver
+	 * @param dataResolver
+	 * @return
+	 */
 	private Animation load(GLTFAnimation glAnimation, NodeResolver nodeResolver, DataResolver dataResolver){
 		
 		ObjectMap<Node, NodeAnimation> animMap = new ObjectMap<Node, NodeAnimation>();

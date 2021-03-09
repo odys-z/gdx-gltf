@@ -16,6 +16,10 @@ import net.mgsx.gltf.data.texture.GLTFImage;
 import net.mgsx.gltf.data.texture.GLTFSampler;
 import net.mgsx.gltf.data.texture.GLTFTexture;
 
+/**Java type for GLTF data nodes.
+ * {@link GLTFScene} scene, {@link GLTFMesh} mesh, ...
+ *
+ */
 public class GLTF extends GLTFObject {
 	public GLTFAsset asset;
 	public int scene;

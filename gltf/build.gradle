@@ -1,6 +1,7 @@
 // eclipse.project.name = "gdx-gltf"
 
 apply plugin: "java"
+apply plugin: "eclipse"
 
 
 dependencies {
@@ -33,4 +34,3 @@ artifacts {
     archives sourcesJar
     archives javadocJar
 }
-

@@ -21,6 +21,23 @@ allprojects {
 
 eclipse.project.name = appName
 
+project(":demo:android") {
+    apply plugin: "android"
+	apply plugin: 'eclipse'
+
+    configurations { natives }
+
+    dependencies {
+        implementation project(":demo:core")
+        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+    }
+}
+
 project(":demo:html") {
     apply plugin: "java-library"
     apply plugin: "gwt"
