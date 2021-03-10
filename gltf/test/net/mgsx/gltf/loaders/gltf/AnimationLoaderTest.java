@@ -36,6 +36,7 @@ public class AnimationLoaderTest extends Game {
 		camera.position.set(0, 0, 3);
 		camera.lookAt(Vector3.Zero);
 		sceneManager.setCamera(camera);
+		scene.animationController.animate("simple", 0);
 	}
 	
 	@Override
