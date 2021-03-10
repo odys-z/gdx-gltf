@@ -1,4 +1,5 @@
-{
+{ "description": ["Modified from https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_006_SimpleAnimation.md",
+                  "Added animation.name. see GLTF sepcification: https://github.com/KhronosGroup/glTF/tree/master/specification/2.0/#reference-animation"],
   "scenes" : [ { "nodes" : [ 0 ] } ],
   
   "nodes" : [ { "mesh" : 0, "rotation" : [ 0.0, 0.0, 0.0, 1.0 ] } ],
@@ -14,6 +15,7 @@
   
   "animations": [
     {
+      "name": "simple",
       "samplers" : [
         { "input" : 2,
           "interpolation" : "LINEAR",
