@@ -72,12 +72,11 @@ public class GLTFLoaderBase implements Disposable {
 	protected MeshLoader meshLoader;
 	protected ImageResolver imageResolver;
 	
-	public GLTFLoaderBase() 
-	{
+	public GLTFLoaderBase() {
 		this(null);
 	}
-	public GLTFLoaderBase(TextureResolver textureResolver) 
-	{
+
+	public GLTFLoaderBase(TextureResolver textureResolver) {
 		this.textureResolver = textureResolver;
 		animationLoader = new AnimationLoader();
 		nodeResolver = new NodeResolver();
@@ -85,7 +84,7 @@ public class GLTFLoaderBase implements Disposable {
 		skinLoader = new SkinLoader();
 	}
 	
-	public SceneAsset load(DataFileResolver dataFileResolver, boolean withData){
+	public SceneAsset load(DataFileResolver dataFileResolver, boolean withData) {
 		try{
 			this.dataFileResolver = dataFileResolver;
 			
@@ -187,8 +186,7 @@ public class GLTFLoaderBase implements Disposable {
 		}
 	}
 	
-	private SceneModel loadScene(GLTFScene gltfScene) 
-	{
+	private SceneModel loadScene(GLTFScene gltfScene) {
 		SceneModel sceneModel = new SceneModel();
 		sceneModel.name = gltfScene.name;
 		sceneModel.model = new Model();
@@ -224,7 +222,7 @@ public class GLTFLoaderBase implements Disposable {
 		return sceneModel;
 	}
 	
-	private void collectData(Model model, Iterable<Node> nodes){
+	private void collectData(Model model, Iterable<Node> nodes) {
 		for(Node node : nodes){
 			for(NodePart part : node.parts){
 				meshSet.add(part.meshPart.mesh);
@@ -235,12 +233,11 @@ public class GLTFLoaderBase implements Disposable {
 		}
 	}
 	
-	private static <T> void copy(ObjectSet<T> src, Array<T> dst){
+	private static <T> void copy(ObjectSet<T> src, Array<T> dst) {
 		for(T e : src) dst.add(e);
 	}
 
-	private Node getNode(int id) 
-	{
+	private Node getNode(int id) {
 		Node node = nodeResolver.get(id);
 		if(node == null){
 			node = new NodePlus();
