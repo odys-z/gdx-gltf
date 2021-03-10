@@ -1,9 +1,10 @@
-{ "description": ["Modified from https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_006_SimpleAnimation.md",
-                  "Added animation.name. see GLTF sepcification: https://github.com/KhronosGroup/glTF/tree/master/specification/2.0/#reference-animation"],
+{ "extras": { "from": "Modified from https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_006_SimpleAnimation.md",
+              "change-log": ["Added animation.name. see GLTF sepcification: https://github.com/KhronosGroup/glTF/tree/master/specification/2.0/#reference-animation"]
+            },
   "scenes" : [ { "nodes" : [ 0 ] } ],
-  
+
   "nodes" : [ { "mesh" : 0, "rotation" : [ 0.0, 0.0, 0.0, 1.0 ] } ],
-  
+
   "meshes" : [
     {
       "primitives" : [ {
@@ -12,7 +13,7 @@
       } ]
     }
   ],
-  
+
   "animations": [
     {
       "name": "simple",
@@ -87,7 +88,7 @@
       "min" : [ 0.0, 0.0, 0.0, -0.707 ]
     }
   ],
-  
+
   "asset" : { "version" : "2.0" }
-  
+
 }

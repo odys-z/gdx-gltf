@@ -188,7 +188,6 @@ public class SceneManager implements Disposable {
 	 * Render shadows only to interal frame buffers.
 	 * (useful when you're using your own frame buffer to render scenes)
 	 */
-	@SuppressWarnings("deprecation")
 	public void renderShadows(){
 		DirectionalLight light = getFirstDirectionalLight();
 		if(light instanceof DirectionalShadowLight){

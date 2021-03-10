@@ -24,7 +24,11 @@ public class SeparatedDataFileResolver implements DataFileResolver
 	
 	@Override
 	public void load(FileHandle file) {
-		glModel = new Json().fromJson(GLTF.class, file);
+		// glModel = new Json().fromJson(GLTF.class, file);
+		Json json = new Json();
+		json.setIgnoreUnknownFields(true);
+		glModel = json.fromJson(GLTF.class, file);
+
 		path = file.parent();
 		loadBuffers(path);
 	}
