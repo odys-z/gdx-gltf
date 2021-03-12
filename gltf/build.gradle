@@ -34,16 +34,17 @@ artifacts {
     archives javadocJar
 }
 
-// to publish locally: 
-// ~/gdx-gltf$ ./gradlew publishToMavenLocal
+// to publish locally:
+// ~/gdx-gltf$ ./gradlew gltf:publishToMavenLocal
 apply plugin: 'maven-publish'
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-        	groupId = 'io.github.odys-z'
+        	// groupId = 'io.github.odys-z'
+        	groupId = 'net.mgsx.gltf'
             artifactId = 'gdx-gltf'
-            version = '0.1.0-SNAPSHOT'
+            version = '2.0.1-SNAPSHOT'
             from components.java
         }
     }

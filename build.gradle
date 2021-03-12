@@ -1,13 +1,13 @@
 allprojects {
 
     group = 'net.mgsx.gltf'
-    version = '2.0.0'
-    
+    version = '2.0.1-SNAPSHOT'
+
     ext {
-    	gdxVersion = '1.9.12'
+    	gdxVersion = '1.9.13'
     	junitVersion = '4.12'
     }
-    
+
 	buildscript {
 	    repositories {
 	        mavenLocal()
@@ -17,7 +17,7 @@ allprojects {
 	        jcenter()
 	    }
 	}
-	
+
 	repositories {
         mavenLocal()
         mavenCentral()
@@ -28,7 +28,7 @@ allprojects {
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
         jcenter()
     }
-	
+
 	apply plugin: "eclipse"
 	apply plugin: "idea"
 }

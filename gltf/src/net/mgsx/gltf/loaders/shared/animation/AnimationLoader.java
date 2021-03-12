@@ -51,6 +51,8 @@ public class AnimationLoader {
 	
 	/**Convert glAnimation into {@link Animation},
 	 * a list of java type instance of GLTF Channels, {@link NodeAnimation}. 
+	 * When reaching here, {@link Node} with {@linkcom.badlogic.gdx.graphics.g3d.model.MeshPart MeshPart}
+	 * should already been loaded, by {@link GLTFLoaderBase#getNode(int)}.
 	 * 
 	 * @param glAnimation
 	 * @param nodeResolver
