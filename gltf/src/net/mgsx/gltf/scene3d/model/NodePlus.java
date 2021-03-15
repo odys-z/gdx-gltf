@@ -25,8 +25,7 @@ public class NodePlus extends Node
 	}
 	
 	@Override
-	protected Node set(Node other) 
-	{
+	protected Node set(Node other) {
 		if(other instanceof NodePlus){
 			if(((NodePlus)other).weights != null){
 				weights = ((NodePlus)other).weights.cpy();
@@ -34,5 +33,11 @@ public class NodePlus extends Node
 			}
 		}
 		return super.set(other);
+	}
+	
+	public static NodePlus clone(Node frm) {
+		NodePlus n = new NodePlus();
+		n.set(frm);
+		return n;
 	}
 }
