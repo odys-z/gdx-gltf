@@ -12,6 +12,8 @@ dependencies {
 }
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 sourceSets.main.java.srcDirs = [ "src" ]
 sourceSets.main.resources.srcDirs = ["src"]
 sourceSets.test.java.srcDirs = [ "test" ]
@@ -51,10 +53,10 @@ task packageJavadoc(type: Jar) {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-        	// groupId = 'io.github.odys-z'
-        	groupId = 'net.mgsx.gltf'
+        	groupId = 'io.github.odys-z'
+        	// groupId = 'net.mgsx.gltf'
             artifactId = 'gdx-gltf'
-            version = '2.0.1-SNAPSHOT'
+            version = '0.1.1-SNAPSHOT'
             from components.java
 
             artifact sourceJar
