@@ -7,10 +7,9 @@ import com.badlogic.gdx.utils.Array;
  * {@link Node} hack to store morph targets weights 
  */
 public class NodePlus extends Node {
-	// static { System.out.println("NodePlus by odys-z..."); }
-
 	/**
-	 * null if no morph targets
+	 * null if no morph targets<br>
+	 * Ody: but AnimationContorllerPlus won't play animation if no weights?
 	 */
 	public WeightVector weights;
 	

@@ -3,6 +3,9 @@ package net.mgsx.gltf.scene3d.model;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 
+/**Weight vector:
+ * values[count]
+ */
 public class WeightVector {
 
 	public int count;
